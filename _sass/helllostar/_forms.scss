@@ -1,0 +1,155 @@
+//
+// Forms
+// --------------------------------------------------
+
+textarea.form-control {
+    height: auto;
+    max-width: 100%;
+    min-width: 100%;
+    vertical-align: top;
+}
+
+.form-control {
+  border-color: $brand-light;
+  border-radius: $border-radius-base;
+}
+
+.form-control,
+.form-control:focus {
+  @include box-shadow(none);
+}
+.form-control:focus {
+  border-color: $brand-primary;
+}
+
+.form-control-feedback {
+  line-height: 34px !important;
+}
+
+
+// Feedback states
+.has-success {
+  @include form-control-validation($brand-success, $brand-success, $brand-white);
+}
+.has-warning {
+  @include form-control-validation($brand-warning, $brand-warning, $brand-white);
+}
+.has-error {
+  @include form-control-validation($brand-danger, $brand-danger, $brand-danger);
+}
+
+// form-can-dance
+label {
+    font-weight: 400;
+}
+
+.form-can-dance {
+  position: relative;
+  margin-bottom: 45px;
+  > label {
+    position: absolute;
+    cursor: text;
+    color: $brand-dark;
+    @include scale(1);
+    @include translate3d(25px, 25px, 0);
+    @include transform-origin(left top);
+    @include transition(all 450ms cubic-bezier(.23, 1, .32, 1) 0ms);
+    z-index: 1;
+  }
+  > .form-control {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    padding: 37px 25px 13px;
+    height: auto;
+    // padding-left: 0;
+    // padding-right: 0;
+    color: $brand-dark;
+    letter-spacing: $letter-spacing-base;
+    background-color: $brand-light;
+    border: 1px solid darken($brand-light, 5%);
+    // z-index: 2;
+  }
+
+  // placeholder
+  > .form-control::-moz-placeholder {
+    color: transparent;
+  }
+  > .form-control:-ms-input-placeholde {
+    color: transparent;
+  }
+  > .form-control::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &.is-focused {
+    > label {
+      font-size: $font-size-sm;
+      color: lighten($brand-dark, 30%);
+      @include scale(0.75);
+      @include translate3d(25px, 13px, 0);
+    }
+  }
+
+  // info
+  &.form-info {
+    > label {
+      // color: $brand-white;
+    }
+    > .form-control {
+      color: $brand-dark;
+      // border-color: lighten($brand-info, 15%);
+    }
+
+    &.is-focused {
+      > label {
+        color: $brand-info;
+      }
+      > .form-control {
+        // color: $brand-dark;
+        border-color: lighten($brand-info, 15%);
+      }
+    }
+  }
+
+  // has error
+  &.has-error {
+    > label {
+      color: $brand-danger;
+    }
+    .form-control {
+      background-color: lighten($brand-danger, 37%);
+      border-color: lighten($brand-danger, 30%);
+    }
+    &.is-focused {
+      .form-control {
+        border-color: lighten($brand-danger, 30%);
+      }
+    }
+  }
+
+}
+
+textarea.form-control {
+  display:block;
+  height: auto;
+}
+
+
+// custom radio
+.radio-star {
+  label {
+    display: inherit;
+    // padding-left: 0;
+    background-color: $brand-light;
+    border: 1px solid darken($brand-light, 5%);
+    padding: 25px;
+  }
+  input[type="radio"] {
+    margin-left: 0;
+    + span {
+      display: inherit;
+      padding-left: 20px;
+    }
+  }
+}

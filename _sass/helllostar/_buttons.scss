@@ -1,0 +1,37 @@
+.btn {
+  font-size: $font-size-xs;
+  font-weight: 600;
+  border-radius: 500px;
+  outline: 0!important;
+  padding: 8px 50px;
+  &.btn-lg {
+    font-size: $font-size-md;
+    padding: 20px 50px;
+  }
+}
+
+.btn-default {
+  @include button-variant($text-muted, $text-muted, $text-muted);
+}
+
+.btn-white {
+  @include button-variant($text-color, $brand-white, $brand-white);
+}
+
+.btn-black {
+  @include button-variant($brand-black, $brand-black, $brand-black);
+}
+
+@each $color in $array-brand {
+  // get the color
+  $get-color: map-get($brand-colors, $color);
+  .btn-#{$color} {
+    @include button-variant($get-color, $get-color, $get-color);
+  }
+}
+
+//
+.btn-rounded {
+    padding: 12px 15px;
+    border-radius: 50px;
+}

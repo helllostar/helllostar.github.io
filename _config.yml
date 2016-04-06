@@ -1,0 +1,24 @@
+# Site settings
+title:              Helllo Star
+description:        "workshop by stars for stars"
+
+twitter_username:   helllostar
+facebook_username:  helllostar
+github_username:    helllostar
+
+#Facebook Sharing
+fb_appid:           1723421614601519
+
+# Dependencies
+markdown:           kramdown
+highlighter:        rouge
+
+# Permalinks
+permalink:          pretty
+
+# Server
+host:               0.0.0.0
+port:               8080
+baseurl:            # the subpath of your site, e.g. /bpm2016/
+url:                http://helllostar.github.io # the base hostname & protocol for your site
+encoding:           UTF-8

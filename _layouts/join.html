@@ -1,0 +1,246 @@
+---
+layout: home
+---
+{% assign star_posts = site.categories.star | where:"host", page.host %}
+{% for post in star_posts %}
+  {% assign total_seats = post.seats %}
+{% endfor %}
+
+
+{% assign booked_seat = site.categories.workshopjoin | where:"host", page.host %}
+
+{% for post in booked_seat %}
+  {% assign join_count = join_count | plus: 1 %}
+{% endfor %}
+
+{% assign available_seats = total_seats | minus: join_count %}
+
+<div class="m-t-md clear">
+  <section class="workshop-subpage-header bg-light b-b p-v-xl m-t-xxl">
+    <div class="container">
+      <div class="row p-v-lg">
+        <div class="col-md-12">
+          <a class="text-info text-sm" href="../">Back to workshop page</a>
+          <h1 class="font-light">Ready to Become a Star? <span class="text-md font-normal m-l">Take this small step!</span></h1>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="m-v-xxl">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 hidden-xs">
+        <div class="m-b-xl">
+          <!-- <h5 class="text-uppercase text-muted m-b-md">Read Cleafully</h5> -->
+          <p class="l-h-1x text-muted">
+            hello star, <br>
+            You should try reading the <a class="text-info" href="../faq/">Workshop FAQ</a> first.
+            It’s worth it. Otherwise you'll be miss guided for sure.
+          </p>
+        </div>
+
+        {% assign star_posts = site.categories.star | where:"host", page.host %}
+        {% for post in star_posts %}
+        <div class="p-v-xl p-h-xl b bg-light lt text-muted">
+          <div class="row">
+            <div class="col-xs-6">Start</div>
+            <div class="col-xs-6">{{ post.start }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6">Duration</div>
+            <div class="col-xs-6">{{ post.duration }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6">Day</div>
+            <div class="col-xs-6">{{ post.day }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6">Time</div>
+            <div class="col-xs-6">{{ post.time }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6">Seats limit</div>
+            <div class="col-xs-6">{{ post.seats }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6">Available seats</div>
+            <div class="col-xs-6">{{ available_seats }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6">Venue</div>
+            <div class="col-xs-6"><a class="text-muted" href="{{ post.venuURL }}" target="_blank">{{ post.venue }}</a></div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6">Fee</div>
+            <div class="col-xs-6">{{ post.fee }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="col-md-6 col-md-offset-1">
+        {% assign star_posts = site.categories.star | where:"host", page.host %}
+        {% for post in star_posts %}
+        <form  action="https://formspree.io/{{ post.email }}" data-toggle="validator" method="POST">
+          <input type="hidden" name="_next" value="{{ site.url }}/thanks/" />
+        {% endfor %}
+
+          <div class="form-group form-can-dance form-info">
+            <label for="name">Name</label>
+            <input name="Name" id="name" class="form-control" placeholder="Name" type="text" required>
+          </div>
+          <div class="form-group form-can-dance form-info">
+            <label for="email">Email</label>
+            <input name="Email" id="email" class="form-control" placeholder="Email" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}$">
+          </div>
+          <div class="form-group form-can-dance form-info">
+            <label for="location">Location</label>
+            <input name="Location" id="location" class="form-control" placeholder="Location" type="text" required>
+            <p class="text-xs text-muted p-t-xs m-b-none"></p>
+          </div>
+          <div class="form-group form-can-dance form-info">
+            <label for="phone">Phone</label>
+            <input name="Phone" id="phone" class="form-control" placeholder="Phone" type="tel" pattern='^\d{8,14}$'>
+            <p class="text-xs text-muted p-t-xs m-b-none">Not compulsory, but we insist you to give your phone number.</p>
+          </div>
+          <div class="form-group form-can-dance form-info">
+            <label for="website-url">Website URL</label>
+            <input name="Website URL" id="website-url" class="form-control" placeholder="Website URL" type="text" required>
+            <p class="text-xs text-muted p-t-xs m-b-none">Your home page, blog, company site or social link, e.g. http://helllostar.com/zafree</p>
+          </div>
+
+          <div class="form-group form-can-dance form-info">
+            <label for="bio">Bio</label>
+            <textarea name="Bio" id="bio" class="form-control" placeholder="Bio" type="textarea" rows="5" maxlength="251" required></textarea>
+            <span class="counter pull-right text-sm text-muted m-t-xxs"></span>
+            <p class="text-xs text-muted p-t-xs m-b-none">Help us to know you better. How about a secret? Or something funny about you!</p>
+          </div>
+
+          <div class="line b-b p-t-md"></div>
+          <div class="m-v-xxl">
+            <span class="clear text-lg text-black m-b-xs">Playing Zone</span>
+            <p class="text-sm">We'll love to know where you play.</p>
+          </div>
+
+          <div class="form-group form-can-dance form-info">
+            <label for="company">Company</label>
+            <input name="Company" id="company" class="form-control" placeholder="Company" type="text">
+            <p class="text-xs text-muted p-t-xs m-b-none">Enter your company name or hint freelancer, student etc.</p>
+          </div>
+          <div class="form-group form-can-dance form-info">
+            <label for="company-url">Company URL</label>
+            <input name="Company URL" id="company-url" class="form-control" placeholder="Company URL" type="text">
+          </div>
+          <div class="form-group form-can-dance form-info">
+            <label for="position">Position</label>
+            <input name="Position" id="position" class="form-control" placeholder="Position" type="text" required>
+            <p class="text-xs text-muted p-t-xs m-b-none">Playing role as a player e.g. UI Designer, Developer, Student</p>
+          </div>
+
+          <div class="line b-b p-t-md"></div>
+          <div class="m-v-xxl">
+            <span class="clear text-lg text-black m-b-xs">Social Profiles</span>
+            <p class="text-sm">Enter links so curious-cats can find you on other networks.</p>
+          </div>
+
+          {% assign star_posts = site.categories.workshopform | where:"host", page.host %}
+          {% for post in star_posts %}
+
+          {% if post.facebook %}
+          <div class="form-group form-can-dance form-info">
+            <label for="facebook">Facebook</label>
+            <input name="Facebook" id="facebook" class="form-control" placeholder="Facebook" type="text">
+          </div>
+          {% endif %}
+          {% if post.twitter %}
+          <div class="form-group form-can-dance form-info">
+            <label for="twitter">Twitter</label>
+            <input name="Twitter" id="twitter" class="form-control" placeholder="Twitter" type="text">
+          </div>
+          {% endif %}
+          {% if post.github %}
+          <div class="form-group form-can-dance form-info">
+            <label for="github">Github</label>
+            <input name="Github" id="github" class="form-control" placeholder="Github" type="text">
+          </div>
+          {% endif %}
+          {% if post.codepen %}
+          <div class="form-group form-can-dance form-info">
+            <label for="codepen">Codepen</label>
+            <input name="Codepen" id="codepen" class="form-control" placeholder="Codepen" type="text">
+          </div>
+          {% endif %}
+          {% if post.dribbble %}
+          <div class="form-group form-can-dance form-info">
+            <label for="dribbble">Dribbble</label>
+            <input name="Dribbble" id="dribbble" class="form-control" placeholder="Dribbble" type="text">
+          </div>
+          {% endif %}
+          {% if post.behance %}
+          <div class="form-group form-can-dance form-info">
+            <label for="behance">Behance</label>
+            <input name="Behance" id="behance" class="form-control" placeholder="Behance" type="text">
+          </div>
+          {% endif %}
+          {% endfor %}
+
+          <div class="line b-b p-t-md"></div>
+          <div class="m-v-xxl">
+            <span class="clear text-lg text-black m-b-xs">Payment Method</span>
+            <p class="text-sm">Nothing is free. Not even this Workshop.</p>
+          </div>
+
+          <div class="form-group m-b-xxl">
+            <div class="radio radio-star">
+              <label class="">
+                <input name="Payment" value="Via bKash" type="radio" required>
+                <span>Via bKash</span>
+              </label>
+            </div>
+            <div class="radio radio-star">
+              <label class="">
+                <input name="Payment" value="Cash on hand" type="radio" required>
+                <span>Cash on hand</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="line b-b p-t-md"></div>
+          <div class="m-v-xxl text-center">
+            <!-- <span class="clear text-lg text-black m-b-xs">Payment Method</span> -->
+            <p class="text-md l-h-1x">
+              Send me your information, then I'll contact with you via social media or email or phone, and I'll talk in details.
+            </p>
+          </div>
+
+          <div class="form-group text-center">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+                All good!
+              </label>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-lg btn-info btn-block">
+              Submit for Join Workshop
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

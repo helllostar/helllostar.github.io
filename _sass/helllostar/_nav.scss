@@ -1,0 +1,112 @@
+.navbar-brand {
+  //line-height: inherit;
+}
+
+.navbar-nav {
+  > li {
+    > a {
+      //line-height: $line-height-base;
+      padding: 15px 10px;
+      &.more {
+        padding: 15px 5px;
+        color: $text-muted;
+        > i.hi {
+          @include scale(1.7);
+        }
+        &:hover,
+        &:focus,
+        &:active {
+          color: $brand-info;
+        }
+
+      }
+    }
+    > .dropdown-menu {
+      margin-top: 11px;
+      margin-right: -8px;
+    }
+  }
+    > .active {
+       > a {
+          color: $nav-active;
+          &:hover,
+          &:focus {
+            color: $nav-active;
+          }
+        }
+    }
+}
+
+.navbar-right {
+    margin-right: 0;
+}
+
+.nav{
+  > li{
+    > a{
+      //color: $text-muted;
+      padding: 15px 10px;
+      &:hover,
+      &:focus{
+        //color: $nav-active;
+        background-color: transparent;
+      }
+    }
+  }
+  &.nav-sm{
+    > li > a{
+      padding: 6px 10px;
+    }
+  }
+  &.nav-md{
+    > li > a{
+      padding: 15px 25px;
+    }
+  }
+  &.nav-lg{
+    > li > a{
+      padding: 15px 30px;
+    }
+  }
+  .open{
+    > a{
+      &,
+      &:hover,
+      &:focus{
+        background-color: transparent;
+      }
+    }
+  }
+  &.nav-center {
+    display: inline-block;
+    float: none;
+  }
+}
+
+.nav-pills {
+  > li {
+    // Links rendered as pills
+    > a {
+      color: $brand-dark;
+      border-radius: $border-radius-base;
+      &:hover,
+      &:focus{
+        color: $nav-active;
+        background-color: lighten($brand-light, 7%);
+      }
+    }
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background-color: $brand-light;
+        > .badge {
+          color: $brand-primary;
+        }
+      }
+    }
+
+  }
+}

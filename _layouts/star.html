@@ -1,0 +1,260 @@
+---
+layout: home
+---
+
+{% assign total_seats = page.seats %}
+
+{% assign booked_seat = site.categories.workshopjoin | where:"host", page.host %}
+
+{% for post in booked_seat %}
+  {% assign join_count = join_count | plus: 1 %}
+{% endfor %}
+
+{% assign available_seats = total_seats | minus: join_count %}
+
+<section class="cover" style="background-image: url(/imgs/{{ page.host }}/cover-{{ page.host }}.jpg);">
+  <div class="item">
+    <div class="center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-md-offset-1">
+            <h1 class="text-black">{{ page.workshopTitle }}</h1>
+            <p class="text-md m-t-md">by {{ page.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workshop-action bg-white b-b b-t p-v-md">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 text-info text-xs font-semi-bold p-t-xs m-t-1x">
+        <span class="m-r-md">Seat limit: {{ total_seats }}</span>
+        <span class="m-r-md">Available seats: {{ available_seats }}</span>
+        <span class="text-muted">Venue: <a href="{{ page.venuURL }}" target="_blank" class="text-muted">{{ page.venue }}</a></span>
+      </div>
+      <div class="col-md-5">
+        <div class="box">
+          <div class="col p-r-sm">
+            <a href="/{{ page.host }}/faq/" class="btn btn-info btn-block">Workshop FAQ</a>
+          </div>
+          <div class="col p-l-sm">
+            {% if available_seats <= 0 %}
+            <span class="btn btn-warning btn-block disabled">All Tickets Gone!</span>
+            {% else %}
+            <a href="/{{ page.host }}/join/" class="btn btn-warning btn-block ">Join This Workshop</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="has-sector b-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 p-v-xxl">
+
+        <!--workshop description -->
+        <div class="m-b-xxl">
+          <h5 class="text-uppercase text-muted m-b-md">Workshop Description</h5>
+          <p class="l-h-1x text-md">
+            {{ page.workshopDescription }}
+          </p>
+        </div>
+        <!--/ workshop description -->
+
+        <!--workshop overview -->
+        <div class="m-b-xxl">
+          <h5 class="text-uppercase text-muted m-b-md">Workshop Overview</h5>
+          {% assign workshop_overview = site.categories.workshop | where:"host", page.host %}
+
+          {% for post in workshop_overview %}
+            {% assign overview_count = overview_count | plus: 1 %}
+          {% endfor %}
+
+          {% if overview_count > 0 %}
+
+          {% for post in workshop_overview reversed %}
+          <div class="m-t-xl">
+            <div class="thumb pull-left m-r-md r">
+              <img src="/imgs/{{ post.host }}/workshop/{{ post.photo }}" alt="">
+            </div>
+            <div class="clear p-t">
+              <h6 class="text-uppercase text-muted l-s-1x">{{ post.level }}</h6>
+              <span class="clear text-lg">{{ post.topic }}</span>
+              <div class="workshop-overview m-v">
+                {{post.content | markdownify}}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+          {% else %}
+          <div class="m-t-xl">
+            <p>Please add workshop overview</p>
+          </div>
+          {% endif %}
+        </div>
+        <!--/ workshop overview -->
+      </div>
+
+      <div class="col-md-5 col-md-offset-1">
+        <div class="sector p-t-xxl">
+          <!--workshop owner details -->
+          <div class="m-b-xxl">
+            <h5 class="text-uppercase text-muted m-b-lg">About the workshop Owner</h5>
+            <div class="thumb-md pull-left m-r-md">
+              <img src="/imgs/{{ page.host }}/{{ page.host }}.jpg" alt="">
+              <p class="text-center m-t-xs">
+                {% if page.facebook %}
+                <a class="text-muted" href="https://www.facebook.com/{{ page.facebook }}" target="_blank"><i class="hi hi-facebook"></i></a>
+                {% endif %}
+                {% if page.twitter %}
+                <a class="text-muted" href="https://twitter.com/{{ page.twitter }}" target="_blank"><i class="hi hi-twitter"></i></a>
+                {% endif %}
+                {% if page.github %}
+                <a class="text-muted" href="https://github.com/{{ page.github }}" target="_blank"><i class="hi hi-github"></i></a>
+                {% endif %}
+                {% if page.dribbble %}
+                <a class="text-muted" href="https://dribbble.com/{{ page.dribbble }}" target="_blank"><i class="hi hi-dribbble"></i></a>
+                {% endif %}
+                {% if page.codepen %}
+                <a class="text-muted" href="http://codepen.io/{{ page.codepen }}" target="_blank"><i class="hi hi-codepen"></i></a>
+                {% endif %}
+                {% if page.behance %}
+                <a class="text-muted" href="https://www.behance.net/{{ page.behance }}" target="_blank"><i class="hi hi-behance"></i></a>
+                {% endif %}
+                {% if page.mailto %}
+                <a class="text-muted" href="mailto:{{ page.mailto }}?subject=Hello Star via%20BPM2016&body=You are Awesome or Shit!" target="_blank" title="mail"><i class="hi hi-mail"></i></a>
+                {% endif %}
+              </p>
+            </div>
+            <div class="clear p-t-xs">
+              <h4 class="text-md"><a href="{{ page.website }}" target="_blank">{{ page.name }}</a></h4>
+              <p class="text-sm m-t-xs">{{ page.posiiton }}
+                {% if post.company and post.companyURL %}
+                <a class="text-xs" href="{{ page.companyURL }}" target="_blank">@{{ page.company }}</a>
+                {% elsif post.company %}
+                <span class="text-xs">@{{ page.company }}</span>
+                {% endif %}
+              </p>
+              <p class="l-h-1x m-t-lg">
+                {{ page.bio }}
+              </p>
+            </div>
+          </div>
+          <!--/ workshop owner details -->
+
+          <!--workshop assistants -->
+          {% assign workshop_assistants = site.categories.workshopassistants | where:"host", page.host %}
+
+          {% for post in workshop_assistants %}
+            {% assign assistants_count = assistants_count | plus: 1 %}
+          {% endfor %}
+
+          {% if assistants_count > 0 %}
+          <div class="workshop-assistants m-b-xxl">
+            <h5 class="text-uppercase text-muted m-b-lg">Workshop assistants</h5>
+            {% for post in workshop_assistants %}
+            <div class="thumb-md">
+              <img src="/imgs/{{ post.host }}/assistants/{{ post.photo }}" alt="">
+              <p class="font-semi-bold text-ellipsis text-center m-t-xs">
+                <a href="{{ post.website }}" target="_blank" class="text-sm">{{ post.name }}</a>
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <!--/ workshop assistants -->
+
+          <!--workshop notes -->
+          <div class="workshop-assistants m-b-xxl">
+            <h5 class="text-uppercase text-muted m-b-md">Workshop notes</h5>
+            {% if page.workshopNotes %}
+            <p class="l-h-1x">
+              {{ page.workshopNotes }}
+            </p>
+            {% else %}
+            <p class="l-h-1x">
+              Please include notes
+            </p>
+            {% endif %}
+          </div>
+          <!--/ workshop notes -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-v-xxl">
+  <div class="container">
+    <!--joined workshop -->
+    <h5 class="text-uppercase text-muted m-b-xl">Who Joined Workshop</h5>
+    <div class="row joined-stars">
+
+      {% assign user_post = site.categories.workshopjoin | where:"host", page.host %}
+      {% for post in user_post reversed %}
+      <div class="col-md-4 m-b-xxl">
+        <div class="thumb pull-left m-r-md">
+          <img src="/imgs/{{ post.host }}/join/{{ post.photo }}" alt="">
+          <p class="text-center m-t-xxs text-sm">
+            {% if post.facebook %}
+            <a class="text-muted" href="https://www.facebook.com/{{ post.facebook }}" target="_blank"><i class="hi hi-facebook"></i></a>
+            {% endif %}
+            {% if post.twitter %}
+            <a class="text-muted" href="https://twitter.com/{{ post.twitter }}" target="_blank"><i class="hi hi-twitter"></i></a>
+            {% endif %}
+            {% if post.github %}
+            <a class="text-muted" href="https://github.com/{{ post.github }}" target="_blank"><i class="hi hi-github"></i></a>
+            {% endif %}
+            {% if post.dribbble %}
+            <a class="text-muted" href="https://dribbble.com/{{ post.dribbble }}" target="_blank"><i class="hi hi-dribbble"></i></a>
+            {% endif %}
+            {% if post.codepen %}
+            <a class="text-muted" href="http://codepen.io/{{ post.codepen }}" target="_blank"><i class="hi hi-codepen"></i></a>
+            {% endif %}
+            {% if post.behance %}
+            <a class="text-muted" href="https://www.behance.net/{{ post.behance }}" target="_blank"><i class="hi hi-behance"></i></a>
+            {% endif %}
+            {% if post.email %}
+            <a class="text-muted" href="mailto:{{ post.mailto }}?subject=Hello Star via%20BPM2016&body=You are Awesome or Shit!" target="_blank" title="mail"><i class="hi hi-mail"></i></a>
+            {% endif %}
+          </p>
+        </div>
+        <div class="clear p-t-xs">
+          <h4 class="text-md font-semi-bold"><a href="{{ post.website }}" target="_blank">{{ post.name }}</a></h4>
+          <p class="text-sm m-t-xs">{{ post.posiiton }}
+
+            {% if post.company and post.companyURL %}
+            <a class="text-xs" href="{{ post.companyURL }}" target="_blank">@{{ post.company }}</a>
+            {% elsif post.company %}
+            <span class="text-xs">@{{ post.company }}</span>
+            {% endif %}
+          </p>
+          <p class="l-h-1x m-t-md">
+            {{ post.bio }}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+    <!--/ joined workshop -->
+
+    {% if available_seats > 0 %}
+    <div class="row text-center m-t-xl">
+      <p class="text-warning">
+        <span class="m-h m-v-sm">{{ available_seats }} more seats are still available</span>
+        <a href="/{{ page.host }}/join/" class="m-h m-v-sm btn btn-warning">Join This Workshop</a>
+      </p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>

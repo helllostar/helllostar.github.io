@@ -1,0 +1,102 @@
+---
+layout: home
+---
+
+{% assign star_posts = site.categories.star | where:"host", page.host %}
+{% for post in star_posts %}
+  {% assign total_seats = post.seats %}
+{% endfor %}
+
+
+{% assign booked_seat = site.categories.workshopjoin | where:"host", page.host %}
+
+{% for post in booked_seat %}
+  {% assign join_count = join_count | plus: 1 %}
+{% endfor %}
+
+{% assign available_seats = total_seats | minus: join_count %}
+
+<div class="m-t-md clear">
+  <section class="workshop-subpage-header bg-light b-b p-v-xl m-t-xxl">
+    <div class="container">
+      <div class="row p-v-lg">
+        <div class="col-md-7">
+          <a class="text-info text-sm" href="../">Back to workshop page</a>
+          <h1 class="font-light">Workshop FAQ <span class="text-md font-normal m-l">Help you to find some answer</span></h1>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="p-b-xxl m-v-lg">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 m-t-xxl">
+        {% for post in star_posts %}
+        <div class="p-v-xl p-h-xl b bg-light lt">
+          <div class="row">
+            <div class="col-xs-6 text-info">Start</div>
+            <div class="col-xs-6">{{ post.start }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6 text-info">Duration</div>
+            <div class="col-xs-6">{{ post.duration }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6 text-info">Day</div>
+            <div class="col-xs-6">{{ post.day }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6 text-info">Time</div>
+            <div class="col-xs-6">{{ post.time }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6 text-info">Seats limit</div>
+            <div class="col-xs-6">{{ post.seats }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6 text-info">Available seats</div>
+            <div class="col-xs-6">{{ available_seats }}</div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6 text-info">Venue</div>
+            <div class="col-xs-6"><a href="{{ post.venuURL }}" target="_blank">{{ post.venue }}</a></div>
+          </div>
+          <div class="line m-v b-b"></div>
+          <div class="row">
+            <div class="col-xs-6 text-info">Fee</div>
+            <div class="col-xs-6">{{ post.fee }}</div>
+          </div>
+        </div>
+        {% endfor %}
+        <p class="p-v-xl text-center">
+          {% if available_seats <= 0 %}
+          <span class="btn btn-warning disabled">All Tickets Gone!</span>
+          {% else %}
+          <a href="/{{ page.host }}/join/" class="btn btn-warning ">Join This Workshop</a>
+          {% endif %}
+        </p>
+      </div>
+
+      <div class="col-md-7 col-md-offset-1 m-t-lg workshop-faq">
+        {{ content }}
+        <p class="p-t-xl">
+          {% if available_seats <= 0 %}
+          <span class="btn btn-warning disabled">All Tickets Gone!</span>
+          {% else %}
+          <a href="/{{ page.host }}/join/" class="btn btn-warning ">Join This Workshop</a>
+          {% endif %}
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

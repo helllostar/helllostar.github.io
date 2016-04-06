@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="/imgs/favicon.png" />
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.host %}
+  <meta property="fb:app_id" content="{{ site.fb_appid }}"/>
+  <meta property="og:title" content="{{ page.workshopTitle }} by {{ page.name }}" />
+  <meta property="og:description" content="Join this awesome workshop and meet host {{ page.name }}." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{site.url}}/{{ page.host }}/" />
+  <meta property="og:image" content="{{site.url}}/imgs/{{ page.host }}.jpg" />
+  {% else %}
+  <meta property="fb:app_id" content="{{ site.fb_appid }}"/>
+  <meta property="og:title" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{site.url}}" />
+  <meta property="og:image" content="{{site.url}}/imgs/share.jpg" />
+  {% endif %}
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bower_components/open-sans-fontface/open-sans.css">
+  <link rel="stylesheet" href="/fonts/helloicon/helloicon.css">
+  <link rel="stylesheet" href="{{ "/dist/css/helllostar.min.css" | prepend: site.baseurl }}">
+</head>

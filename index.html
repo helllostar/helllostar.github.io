@@ -1,0 +1,32 @@
+---
+layout: home
+---
+
+<section class="m-v-xxl p-t-xxl">
+  <div class="container">
+    <h1 class="font-normal m-t-xxl m-b-lg">Workshop...</h1>
+    <div class="row workshop-star">
+      {% for post in site.categories.star %}
+      <div class="col-md-12 p-v-xxl">
+        <span class="text-xs text-muted pull-right m-t-2x">{{ post.start }}</span>
+        <p class="text-muted text-sm">for {{ post.workshopfor }}</p>
+        <div class="m-h-n-lg">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            <div class="item">
+              <img class="hidden-xs" src="imgs/{{ post.host }}/cover-{{ post.host }}.jpg" alt="">
+              <div class="center">
+                <div class="row">
+                  <div class="col-md-5 col-md-offset-1  col-sm-6 col-sm-offset-1">
+                    <h2 class="text-black">{{ post.workshopTitle }}</h2>
+                    <p class="m-t m-b-xs">by {{ post.name }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

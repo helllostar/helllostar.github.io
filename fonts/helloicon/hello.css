@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'HelloIcon';
+    src:    url('fonts/helloicon.eot?gawafx');
+    src:    url('fonts/helloicon.eot?gawafx#iefix') format('embedded-opentype'),
+        url('fonts/helloicon.ttf?gawafx') format('truetype'),
+        url('fonts/helloicon.woff?gawafx') format('woff'),
+        url('fonts/helloicon.svg?gawafx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hi {
+  display: inline-block;
+  font: normal normal normal 1.3857em HelloIcon;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hi {
+  position: relative;
+  top: 0.16em;
+}
+
+.hi-more:before {
+    content: "\e100";
+}
+.hi-twitter:before {
+    content: "\e101";
+}
+.hi-facebook:before {
+    content: "\e102";
+}
+.hi-github:before {
+    content: "\e103";
+}
+.hi-google-plus:before {
+    content: "\e104";
+}
+.hi-linkedin:before {
+    content: "\e105";
+}
+.hi-pinterest:before {
+    content: "\e106";
+}

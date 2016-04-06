@@ -1,0 +1,145 @@
+.headroom {
+  // @include transition(all 1s ease 0s);
+  .navbar-brand {
+    span {
+      overflow: hidden;
+      @include transition(all 1s ease 0s);
+    }
+    span.text-primary {
+      display: inline-block;
+      //border: 1px solid red;
+      width: 59px;
+      position: relative;
+    }
+    span.text-warning {
+      display: inline-block;
+      //border: 1px solid red;
+      width: 68px;
+    }
+    svg {
+      position: relative;
+      top: 0;
+      margin-left: 2px;
+      margin-right: 4px;
+      width: 15px;
+      @include transition(all 1s ease 0s);
+    }
+  }
+
+  &.headroom--not-top {
+    .navbar-brand {
+      span.text-primary {
+        width: 0px;
+      }
+      span.text-warning {
+        width: 0px;
+      }
+      svg {
+        top: -2px;
+        margin-left: 8px;
+        margin-right: 0;
+        @include scale(2.4);
+      }
+    }
+  }
+}
+
+
+//Slide
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes slideDown {
+  0% {
+    -moz-transform: translateY(-100%);
+  }
+
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes slideDown {
+  0% {
+    -o-transform: translateY(-100%);
+  }
+
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated.slideDown {
+  -webkit-animation-name: slideDown;
+  -moz-animation-name: slideDown;
+  -o-animation-name: slideDown;
+  animation-name: slideDown;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-100%);
+  }
+}
+@-moz-keyframes slideUp {
+  0% {
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    -moz-transform: translateY(-100%);
+  }
+}
+@-o-keyframes slideUp {
+  0% {
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    -o-transform: translateY(-100%);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animated.slideUp {
+  -webkit-animation-name: slideUp;
+  -moz-animation-name: slideUp;
+  -o-animation-name: slideUp;
+  animation-name: slideUp;
+}

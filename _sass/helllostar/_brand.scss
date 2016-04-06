@@ -1,0 +1,256 @@
+.cover {
+  position: relative;
+  margin-top: 72px;
+  height: 369px;
+  background-color: $brand-light;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.has-sector {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 9999px;
+    width: 9999px;
+    background-color: lighten($brand-light, 3%);
+    z-index: -2;
+  }
+  .sector {
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -15px;
+      height: 9999px;
+      width: 9999px;
+      background-color: $brand-light;
+      z-index: -1;
+    }
+  }
+}
+
+.workshop-assistants {
+  > .thumb-md {
+    margin-right: 15px;
+    &:nth-child(4n+1) {
+      margin-right: 0;
+    }
+  }
+}
+
+.workshop-overview {
+  h4 {
+    font-weight: 400;
+    + p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.workshop-faq {
+  h3 {
+    font-weight: 400;
+    margin-bottom: 10px;
+    padding-top: 25px;
+    + p {
+      line-height: 1.8;
+      margin-bottom: 0;
+      padding-bottom: 25px;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  p:last-child {
+    border-bottom: none;
+  }
+}
+
+.joined-stars {
+  > div {
+    &:nth-child(3n+1) {
+      clear: both;
+    }
+  }
+}
+
+// footer
+
+.social_share li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.footer_nav {
+  li {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  &.text-muted {
+    > li {
+      > a {
+        color: $text-muted;
+      }
+    }
+  }
+}
+
+.navbar-nav {
+  .dropdown-menu {
+    > .disabled {
+      > a {
+        color: lighten($text-muted, 5%);
+      }
+    }
+  }
+}
+// mobile friendly
+
+@media screen and (max-width: 768px) {
+  .workshop-star {
+    .m-h-n-lg {
+      background-color: $brand-light;
+
+    }
+    h2 {
+      font-size: $font-size-h3;
+      + p {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: $font-size-sm;
+      }
+    }
+    .item .center {
+      position: relative;
+      padding: 30px;
+      @include translate(0, 0);
+    }
+  }
+
+  .headroom {
+    .navbar-brand {
+      span.text-primary {
+        width: 0px;
+      }
+      span.text-warning {
+        width: 0px;
+      }
+      svg {
+        top: -2px;
+        margin-left: 8px;
+        margin-right: 0;
+        @include scale(2.4);
+      }
+    }
+    .description {
+      position: absolute;
+      top: 9px;
+      left: 60px;
+    }
+  }
+
+  .responsive-disabled {
+    top: 3px;
+    position: absolute;
+    right: 30px;
+    z-index: 999;
+    &.navbar-right {
+      float: right !important;
+      margin-right: -15px;
+      .dropdown-menu {
+          // top: 30px;
+          right: 2px;
+          left: auto;
+          // bottom: 10px;
+      }
+    }
+    &.navbar-nav > li {
+      float: left;
+    }
+    li:first-child {
+      display: none;
+    }
+  }
+
+  // open
+  .open > .dropdown-menu {
+      display: block;
+  }
+
+  .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    min-width: 260px;
+    background-color: #ffffff;
+    @include box-shadow(0 0 15px rgba(0, 0, 0, 0.15));
+    z-index: 1000;
+  }
+
+  footer.footer {
+    padding-top: 0;
+  }
+
+  .cover {
+    height: auto;
+    background-image: none !important;
+    .item .center {
+      position: relative;
+      padding: 80px 0;
+      @include translate(0, 0);
+    }
+  }
+
+  .workshop-action {
+    .col-md-7 {
+      text-align: center;
+      span:last-child {
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 10px;
+      }
+    }
+    .box {
+      .col {
+        display: block;
+        padding: 0;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .has-sector {
+    .sector {
+      padding-left: 0;
+    }
+  }
+
+  .workshop-subpage-header {
+    h1 span {
+      display: block;
+      // margin-left: 0;
+    }
+  }
+
+  .footer_nav {
+    li {
+      margin: 5px;
+    }
+    li:first-child {
+      display: block;
+      // margin-bottom: 25px;
+    }
+    li:last-child {
+      display: block;
+      // margin-top: 25px;
+    }
+
+  }
+
+  .social_share li {
+      margin-left: 3px;
+      margin-right: 3px;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "helllostar",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Zafree"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "bootstrap-validator": "https://github.com/1000hz/bootstrap-validator.git#^0.10.1",
+    "open-sans-fontface": "~1.4.2",
+    "headroom.js": "^0.7.0",
+    "autosize": "^3.0.15"
+  }
+}
