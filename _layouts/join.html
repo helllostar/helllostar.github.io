@@ -32,7 +32,7 @@ layout: home
   <div class="container">
     <div class="row">
 
-      <div class="col-md-4 hidden-xs">
+      <div class="col-md-4">
         <div class="m-b-xl">
           <!-- <h5 class="text-uppercase text-muted m-b-md">Read Cleafully</h5> -->
           <p class="l-h-1x text-muted">
@@ -44,7 +44,7 @@ layout: home
 
         {% assign star_posts = site.categories.star | where:"host", page.host %}
         {% for post in star_posts %}
-        <div class="p-v-xl p-h-xl b bg-light lt text-muted">
+        <div class="p-v-xl p-h-xl b bg-light lt text-muted hidden-xs">
           <div class="row">
             <div class="col-xs-6">Start</div>
             <div class="col-xs-6">{{ post.start }}</div>
