@@ -576,6 +576,12 @@ textarea.form-control {
     color: #ff3040;
     background-color: #ff3040; }
 
+.btn-warning {
+  color: #ffffff;
+  background-color: #dd6c5f; }
+  .btn-warning:hover {
+    background-color: #d9594a; }
+
 .btn-rounded {
   padding: 12px 15px;
   border-radius: 50px; }
