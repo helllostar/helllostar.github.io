@@ -30,6 +30,15 @@
   }
 }
 
+.btn-warning {
+  color: $brand-white;
+  background-color: $brand-warning;
+  &:hover {
+    background-color: darken($brand-warning, 5%);
+  }
+
+}
+
 //
 .btn-rounded {
     padding: 12px 15px;
