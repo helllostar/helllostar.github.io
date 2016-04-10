@@ -5,7 +5,7 @@ name:         Imran Mondal
 email:        imran.2057@gmail.com
 website:      https://imranmondal.com
 
-bio: "Cheerful, lively. A designer, also does develop. Likes to be alone. He bears his educational expenses. Does a bit freelancing. Doesn't like to be pitied." 
+bio: "He is cheerful, lively. A designer, also does develop. No friends around, so likes to be alone. He bears his educational expenses. Does a bit freelancing. Doesn't like to be pitied." 
 
 company:     	Marketever
 companyURL:   https://marketever.com
