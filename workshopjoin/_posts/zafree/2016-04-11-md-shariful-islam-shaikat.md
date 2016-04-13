@@ -17,7 +17,7 @@ github:
 codepen:      Shaikat
 dribbble:
 behance:      
-mailto:       shaikat0509@gmail.com
+mailto:       
 
 photo:        md-shariful-islam-shaikat.jpg
 ---

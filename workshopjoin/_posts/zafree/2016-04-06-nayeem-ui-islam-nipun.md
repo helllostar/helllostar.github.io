@@ -17,7 +17,7 @@ github:
 codepen:
 dribbble:
 behance:      
-mailto:       nipunnayeem@gmail.com
+mailto:       
 
 photo:        nayeem-ui-islam-nipun.jpg
 ---

@@ -17,7 +17,7 @@ github:       rahaduzzaman
 codepen:      rahad
 dribbble:     
 behance:      
-mailto:       rahad4444@gmail.com
+mailto:       
 
 photo:        md-rahaduzzaman.jpg
 ---

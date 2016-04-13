@@ -17,7 +17,7 @@ github:
 codepen:
 dribbble:
 behance:      abdullahunnoman
-mailto:       noman.abdullah4@gmail.com
+mailto:       
 
 photo:        abdullah-un-noman.jpg
 ---
