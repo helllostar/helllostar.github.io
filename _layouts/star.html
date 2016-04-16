@@ -31,16 +31,23 @@ layout: home
   <div class="container">
     <div class="row">
       <div class="col-md-7 text-info text-xs font-semi-bold p-t-xs m-t-1x">
+        {% if page.registration != "close" %}
         <span class="m-r-md">Seat limit: {{ total_seats }}</span>
         <span class="m-r-md">Available seats: {{ available_seats }}</span>
         <span class="m-r-md text-muted">Start: {{ page.start }}</span>
         <span class="text-muted">Venue: <a href="{{ page.venuURL }}" target="_blank" class="text-muted">{{ page.venue }}</a></span>
+        {% else %}
+        <span class="m-r-md">Join stars: {{ join_count }}</span>
+        <span class="m-r-md text-muted">Start: {{ page.start }}</span>
+        <span class="text-muted">Venue: <a href="{{ page.venuURL }}" target="_blank" class="text-muted">{{ page.venue }}</a></span>
+        {% endif %}
       </div>
       <div class="col-md-5">
         <div class="box">
           <div class="col p-r-sm">
             <a href="/{{ page.host }}/faq/" class="btn btn-info btn-block">Workshop FAQ</a>
           </div>
+          {% if page.registration != "close" %}
           <div class="col p-l-sm">
             {% if available_seats <= 0 %}
             <span class="btn btn-warning btn-block disabled">All Tickets Gone!</span>
@@ -48,6 +55,11 @@ layout: home
             <a href="/{{ page.host }}/join/" class="btn btn-warning btn-block ">Join This Workshop</a>
             {% endif %}
           </div>
+          {% else %}
+          <div class="col p-l-sm">
+            <span class="btn btn-warning btn-block disabled">All Tickets Gone!</span>
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -248,6 +260,7 @@ layout: home
     </div>
     <!--/ joined workshop -->
 
+    {% if page.registration != "close" %}
     {% if available_seats > 0 %}
     <div class="row text-center m-t-xl">
       <p class="text-warning">
@@ -256,6 +269,9 @@ layout: home
       </p>
     </div>
     {% endif %}
+    {% endif %}
+
+
 
   </div>
 </section>

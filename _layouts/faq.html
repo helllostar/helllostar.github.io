@@ -56,6 +56,7 @@ layout: home
             <div class="col-xs-6">{{ post.time }}</div>
           </div>
           <div class="line m-v b-b"></div>
+          {% if post.registration != "close" %}
           <div class="row">
             <div class="col-xs-6 text-info">Seats limit</div>
             <div class="col-xs-6">{{ post.seats }}</div>
@@ -65,6 +66,12 @@ layout: home
             <div class="col-xs-6 text-info">Available seats</div>
             <div class="col-xs-6">{{ available_seats }}</div>
           </div>
+          {% else %}
+          <div class="row">
+            <div class="col-xs-6 text-info">Join</div>
+            <div class="col-xs-6">{{ join_count }}</div>
+          </div>
+          {% endif %}
           <div class="line m-v b-b"></div>
           <div class="row">
             <div class="col-xs-6 text-info">Venue</div>
@@ -76,7 +83,7 @@ layout: home
             <div class="col-xs-6">{{ post.fee }}</div>
           </div>
         </div>
-        {% endfor %}
+        {% if post.registration != "close" %}
         <p class="p-v-xl text-center">
           {% if available_seats <= 0 %}
           <span class="btn btn-warning disabled">All Tickets Gone!</span>
@@ -84,10 +91,19 @@ layout: home
           <a href="/{{ page.host }}/join/" class="btn btn-warning ">Join This Workshop</a>
           {% endif %}
         </p>
+        {% else %}
+        <p class="p-v-xl text-center">
+          <span class="btn btn-warning disabled">All Tickets Gone!</span>
+        </p>
+        {% endif %}
+        {% endfor %}
       </div>
 
       <div class="col-md-7 col-md-offset-1 m-t-lg workshop-faq">
         {{ content }}
+
+        {% for post in star_posts %}
+        {% if post.registration != "close" %}
         <p class="p-t-xl">
           {% if available_seats <= 0 %}
           <span class="btn btn-warning disabled">All Tickets Gone!</span>
@@ -95,6 +111,12 @@ layout: home
           <a href="/{{ page.host }}/join/" class="btn btn-warning ">Join This Workshop</a>
           {% endif %}
         </p>
+        {% else %}
+        <p class="p-t-xl">
+          <span class="btn btn-warning disabled">All Tickets Gone!</span>
+        </p>
+        {% endif %}
+        {% endfor %}
       </div>
 
     </div>

@@ -65,6 +65,7 @@ layout: home
             <div class="col-xs-6">{{ post.time }}</div>
           </div>
           <div class="line m-v b-b"></div>
+          {% if post.registration != "close" %}
           <div class="row">
             <div class="col-xs-6">Seats limit</div>
             <div class="col-xs-6">{{ post.seats }}</div>
@@ -74,6 +75,12 @@ layout: home
             <div class="col-xs-6">Available seats</div>
             <div class="col-xs-6">{{ available_seats }}</div>
           </div>
+          {% else %}
+          <div class="row">
+            <div class="col-xs-6">Join</div>
+            <div class="col-xs-6">{{ join_count }}</div>
+          </div>
+          {% endif %}
           <div class="line m-v b-b"></div>
           <div class="row">
             <div class="col-xs-6">Venue</div>
