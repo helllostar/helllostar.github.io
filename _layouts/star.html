@@ -149,9 +149,9 @@ layout: home
             <div class="clear p-t-xs">
               <h4 class="text-md"><a href="{{ page.website }}" target="_blank">{{ page.name }}</a></h4>
               <p class="text-sm m-t-xs">{{ page.posiiton }}
-                {% if post.company and post.companyURL %}
+                {% if page.company and page.companyURL %}
                 <a class="text-xs" href="{{ page.companyURL }}" target="_blank">@{{ page.company }}</a>
-                {% elsif post.company %}
+                {% elsif page.company %}
                 <span class="text-xs">@{{ page.company }}</span>
                 {% endif %}
               </p>
