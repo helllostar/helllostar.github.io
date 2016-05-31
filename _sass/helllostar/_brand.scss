@@ -46,10 +46,20 @@
 }
 
 .workshop-overview {
+  p {
+      margin-bottom: 15px;
+  }
   h4 {
     font-weight: 400;
-    + p {
+    + p,
+    + ul {
+      margin-top: 5px;
       margin-bottom: 15px;
+    }
+    + ul {
+        li {
+            line-height: 1.8;
+        }
     }
   }
 }

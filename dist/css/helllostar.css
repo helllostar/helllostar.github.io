@@ -2107,10 +2107,16 @@ img {
   .workshop-assistants > .thumb-md:nth-child(4n+1) {
     margin-right: 0; }
 
+.workshop-overview p {
+  margin-bottom: 15px; }
 .workshop-overview h4 {
   font-weight: 400; }
-  .workshop-overview h4 + p {
+  .workshop-overview h4 + p,
+  .workshop-overview h4 + ul {
+    margin-top: 5px;
     margin-bottom: 15px; }
+  .workshop-overview h4 + ul li {
+    line-height: 1.8; }
 
 .workshop-faq h3 {
   font-weight: 400;
