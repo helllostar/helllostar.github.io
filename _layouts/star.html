@@ -129,6 +129,9 @@ layout: home
                 {% if page.twitter %}
                 <a class="text-muted" href="https://twitter.com/{{ page.twitter }}" target="_blank"><i class="hi hi-twitter"></i></a>
                 {% endif %}
+                {% if page.linkedin %}
+                <a class="text-muted" href="https://www.linkedin.com/in/{{ page.linkedin }}" target="_blank"><i class="hi hi-linkedin"></i></a>
+                {% endif %}
                 {% if page.github %}
                 <a class="text-muted" href="https://github.com/{{ page.github }}" target="_blank"><i class="hi hi-github"></i></a>
                 {% endif %}
@@ -222,6 +225,9 @@ layout: home
             {% endif %}
             {% if post.twitter %}
             <a class="text-muted" href="https://twitter.com/{{ post.twitter }}" target="_blank"><i class="hi hi-twitter"></i></a>
+            {% endif %}
+            {% if post.linkedin %}
+            <a class="text-muted" href="https://www.linkedin.com/in/{{ post.linkedin }}" target="_blank"><i class="hi hi-linkedin"></i></a>
             {% endif %}
             {% if post.github %}
             <a class="text-muted" href="https://github.com/{{ post.github }}" target="_blank"><i class="hi hi-github"></i></a>
