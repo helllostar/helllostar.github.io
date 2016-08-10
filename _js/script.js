@@ -40,11 +40,11 @@ $(document).ready(function() {
 	var headroom = new Headroom(elem, {
 		"offset" : 100,
 		"tolerance" : 5,
-		"classes" : {
-			"initial" : "animated",
-			"pinned" : "slideDown",
-			"unpinned" : "slideUp"
-		}
+		// "classes" : {
+		// 	"initial" : "animated",
+		// 	"pinned" : "slideDown",
+		// 	"unpinned" : "slideUp"
+		// }
 	});
 	headroom.init();
 

@@ -44,51 +44,51 @@ layout: home
 
         {% assign star_posts = site.categories.star | where:"host", page.host %}
         {% for post in star_posts %}
-        <div class="p-v-xl p-h-xl b bg-light lt text-muted hidden-xs">
+        <div class="p-v-xl p-h-xl b bg-light lt hidden-xs">
           <div class="row">
-            <div class="col-xs-6">Start</div>
+            <div class="col-xs-6 text-info">Start</div>
             <div class="col-xs-6">{{ post.start }}</div>
           </div>
           <div class="line m-v b-b"></div>
           <div class="row">
-            <div class="col-xs-6">Duration</div>
+            <div class="col-xs-6 text-info">Duration</div>
             <div class="col-xs-6">{{ post.duration }}</div>
           </div>
           <div class="line m-v b-b"></div>
           <div class="row">
-            <div class="col-xs-6">Day</div>
+            <div class="col-xs-6 text-info">Day</div>
             <div class="col-xs-6">{{ post.day }}</div>
           </div>
           <div class="line m-v b-b"></div>
           <div class="row">
-            <div class="col-xs-6">Time</div>
+            <div class="col-xs-6 text-info">Time</div>
             <div class="col-xs-6">{{ post.time }}</div>
           </div>
           <div class="line m-v b-b"></div>
           {% if post.registration != "close" %}
           <div class="row">
-            <div class="col-xs-6">Seats limit</div>
+            <div class="col-xs-6 text-info">Seats limit</div>
             <div class="col-xs-6">{{ post.seats }}</div>
           </div>
           <div class="line m-v b-b"></div>
           <div class="row">
-            <div class="col-xs-6">Available seats</div>
+            <div class="col-xs-6 text-info">Available seats</div>
             <div class="col-xs-6">{{ available_seats }}</div>
           </div>
           {% else %}
           <div class="row">
-            <div class="col-xs-6">Join</div>
+            <div class="col-xs-6 text-info">Join</div>
             <div class="col-xs-6">{{ join_count }}</div>
           </div>
           {% endif %}
           <div class="line m-v b-b"></div>
           <div class="row">
-            <div class="col-xs-6">Venue</div>
-            <div class="col-xs-6"><a class="text-muted" href="{{ post.venuURL }}" target="_blank">{{ post.venue }}</a></div>
+            <div class="col-xs-6 text-info">Venue</div>
+            <div class="col-xs-6"><a href="{{ post.venuURL }}" target="_blank">{{ post.venue }}</a></div>
           </div>
           <div class="line m-v b-b"></div>
           <div class="row">
-            <div class="col-xs-6">Fee</div>
+            <div class="col-xs-6 text-info">Fee</div>
             <div class="col-xs-6">{{ post.fee }}</div>
           </div>
         </div>

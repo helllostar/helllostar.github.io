@@ -9,7 +9,7 @@ layout: home
       {% for post in site.categories.star %}
       <div class="col-md-12 p-v-xxl">
         {% if post.registration != "close" %}
-        <span class="text-xs pull-right m-t-2x">Start: {{ post.start }}</span>
+        <span class="text-info font-semi-bold text-sm pull-right m-t-2x">{{ post.start }}</span>
         {% endif %}
         <p class="text-muted text-sm">for <span class="p-h-xs p-v-xxs bg-info text-white">{{ post.workshopfor }}</span></p>
         <div class="m-h-n-lg">
