@@ -32,7 +32,9 @@ var plugins  = ['bower_components/jquery/dist/jquery.min.js',
                'bower_components/autosize/dist/autosize.min.js'];
 
 var helpers  = ['_js/script.js',
-                '_js/textarea-count.js'];
+                '_js/textarea-count.js',
+                '_js/pilpil.jekyll.js',
+                '_js/pilpil.js'];
 
 var watchman = ['*.html',
                 '_includes/*',

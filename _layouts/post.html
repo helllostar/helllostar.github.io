@@ -1,0 +1,66 @@
+---
+layout: home-blog
+---
+
+<section class="p-t-xxl m-t-md">
+    <div class="item">
+        <div class="aspectRatioPlaceholder">
+          <div class="aspectRatioPlaceholder-fill"></div>
+          <div class="progressiveMedia" data-width="{{ page.coverWidth }}" data-height="{{ page.coverHeight }}">
+            <img class="progressiveMedia-thumbnail" src="/imgs/blog/{{ page.postImgDir }}/small-{{ page.cover }}" alt="" />
+            <canvas class="progressiveMedia-canvas"></canvas>
+            <img class="progressiveMedia-image" data-src="/imgs/blog/{{ page.postImgDir }}/{{ page.cover }}" alt="" />
+          </div>
+        </div>
+      <div class="bottom linear-gradient text-white" style="z-index: 999">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                      <div class="post-header">
+                          <h1 class="post-title">{{ page.title }}</h1>
+                          <p class="post-by">Published by <a href="{{ page.publisherURL }}" target="_blank">{{ page.publisher }}</a> • {{ page.date | date: "%b %-d, %Y" }}</p>
+                          <div class="">
+                              <ul class="post-share list-inline">
+                                  <li><a class="twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank"><i class="hi hi-twitter"></i></a></li>
+                                  <li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank"><i class="hi hi-facebook"></i></a></li>
+                                  <li><a class="pinterest" href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank"><i class="hi hi-pinterest"></i></a></li>
+                                  <li><a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&title={{ page.title }}&url={{ site.url }}{{ page.url }}&source=http%3a%2f%2fzhangwenli.com" rel="nofollow" target="_blank"><i class="hi hi-linkedin"></i></a></li>
+                                  <li><a class="google-plus" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank"><i class="hi hi-google-plus"></i></a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</section>
+
+<section class="p-v-xxl b-b">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+            {% if page.publisherABOUT %}
+            <div class="post-athor-about bg-light">
+                <h5 class="text-uppercase m-b">About Writer</h5>
+                {{ page.publisherABOUT }}
+            </div>
+            {% endif %}
+            <div class="post m-t-xxl l-h-2x text-md">
+                {{ page.content }}
+            </div>
+            <div class="p-t-xxl">
+                <div class="line w-xs b-b b-dark m-b-xxl"></div>
+                <h5 class="font-normal m-b-md text-md">Give a share if you like :)</h5>
+                <ul class="post-share-footer list-inline text-lg">
+                    <li><a class="" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank"><i class="hi hi-twitter"></i></a></li>
+                    <li><a class="" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank"><i class="hi hi-facebook"></i></a></li>
+                    <li><a class="" href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank"><i class="hi hi-pinterest"></i></a></li>
+                    <li><a class="" href="http://www.linkedin.com/shareArticle?mini=true&title={{ page.title }}&url={{ site.url }}{{ page.url }}&source=http%3a%2f%2fzhangwenli.com" rel="nofollow" target="_blank"><i class="hi hi-linkedin"></i></a></li>
+                    <li><a class="" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank"><i class="hi hi-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>

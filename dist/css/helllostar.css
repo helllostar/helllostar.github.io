@@ -2011,6 +2011,94 @@ img {
   -o-transform: scale(2.4);
   transform: scale(2.4); }
 
+/**
+ * Pilpil v1.0.0 - Progressive Image Loading
+ * @link https://zafree.github.io/pilpil
+ * @copyright 2015-2016 Zafree
+ * @license MIT
+ */
+figure {
+  display: block;
+  margin: 0; }
+
+.graf-figure {
+  position: relative;
+  clear: both;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.aspectRatioPlaceholder {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block; }
+
+.aspectRatioPlaceholder-fill {
+  display: block; }
+
+.progressiveMedia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05); }
+
+.progressiveMedia-thumbnail {
+  display: none; }
+
+.progressiveMedia-canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline; }
+
+.progressiveMedia-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 100;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.progressiveMedia .progressiveMedia-canvas {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.progressiveMedia.is-canvasLoaded .progressiveMedia-canvas {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0s linear 0s,opacity .4s 0s;
+  transition: visibility 0s linear 0s,opacity .4s 0s; }
+
+.progressiveMedia .progressiveMedia-image {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.progressiveMedia.is-imageLoaded .progressiveMedia-image {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0s linear 0s, opacity 1s 0s;
+  transition: visibility 0s linear 0s, opacity 1s 0s; }
+
 .cover {
   position: relative;
   margin-top: 72px;
@@ -2190,3 +2278,85 @@ img {
   .social_share li {
     margin-left: 3px;
     margin-right: 3px; } }
+.linear-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.6)));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); }
+
+.post p {
+  margin-bottom: 30px; }
+.post a {
+  color: #6a9dfa; }
+  .post a:hover, .post a:focus {
+    text-decoration: underline; }
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+  padding-top: 10px;
+  padding-bottom: 20px; }
+.post-header {
+  padding-bottom: 50px; }
+.post-title {
+  font-size: 48px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+  margin-top: 10px; }
+.post-by {
+  font-size: 18px;
+  margin-top: 15px;
+  padding-left: 3px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4); }
+  .post-by a {
+    color: #fff; }
+.post-share {
+  font-size: 18px;
+  margin-top: 25px;
+  padding-left: 8px; }
+  .post-share li {
+    padding: 0;
+    margin-right: -3px; }
+    .post-share li a {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 3px;
+      transition: .2s; }
+    .post-share li:first-child a {
+      border-radius: 3px 0 0 3px; }
+    .post-share li:last-child a {
+      border-radius: 0 3px 3px 0; }
+  .post-share .facebook:hover {
+    background-color: #3B5998; }
+  .post-share .twitter:hover {
+    background-color: #55ACEE; }
+  .post-share .pinterest:hover {
+    background-color: #C8232C; }
+  .post-share .linkedin:hover {
+    background-color: #0E76A8; }
+  .post-share .google-plus:hover {
+    background-color: #DD4B39; }
+.post-athor-about {
+  padding: 30px 35px;
+  line-height: 1.8; }
+
+@media (max-width: 767px) {
+  .post-header {
+    padding-bottom: 0; }
+  .post-title {
+    font-size: 21px; }
+  .post-by {
+    font-size: 13px;
+    margin-top: 5px;
+    padding-left: 3px; }
+  .post-share {
+    display: none; } }
+.post-share-footer li a .hi {
+  transition: .2s; }
+.post-share-footer li a .hi-facebook:hover {
+  color: #3B5998; }
+.post-share-footer li a .hi-twitter:hover {
+  color: #55ACEE; }
+.post-share-footer li a .hi-pinterest:hover {
+  color: #C8232C; }
+.post-share-footer li a .hi-linkedin:hover {
+  color: #0E76A8; }
+.post-share-footer li a .hi-google-plus:hover {
+  color: #DD4B39; }
