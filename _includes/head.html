@@ -18,8 +18,8 @@
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ site.url }}" />
-  <meta property="og:image" content="{{ site.url }}" />
+  <meta property="og:url" content="{{ page.url }}" />
+  <meta property="og:image" content="{{ site.url }}/imgs/blog/{{ page.postImgDir }}/{{ page.cover }}" />
   {% else %}
   <meta property="fb:app_id" content="{{ site.fb_appid }}"/>
   <meta property="og:title" content="{{ site.title }}" />
