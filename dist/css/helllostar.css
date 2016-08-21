@@ -2336,6 +2336,8 @@ figure {
 .post-athor-about {
   padding: 30px 35px;
   line-height: 1.8; }
+  .post-athor-about a {
+    text-decoration: underline; }
 
 @media (max-width: 767px) {
   .post-header {

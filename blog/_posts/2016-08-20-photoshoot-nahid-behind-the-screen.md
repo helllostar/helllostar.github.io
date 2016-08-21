@@ -12,7 +12,7 @@ coverHeight: 743
 
 publisher: Mainul Munna
 publisherURL: https://www.facebook.com/greatmunna
-publisherABOUT:
+publisherABOUT: "We recently spent a day behind the scenes with the photographer <a href='https://www.facebook.com/greatmunna' target='_blank'>Mainul Munna</a>, studying on Honors 2nd year, fell in love with photography from the moment he first picked up a camera, and is just as passionate about it today. The 20-year-old got started at a young age (14), shooting pictures of sky, sun rising, sun sets using mobile camera or friend’s DSLR. After buying his own DSLR on 2nd February 2016, he started taking photography more seriously."
 ---
 
 ### No smile, our target doesn’t smile
@@ -34,7 +34,7 @@ As he is not going to smile, we started to think in a different way. Target: dis
 ![...]({{site.baseurl}}/imgs/blog/photoshoot-nahid/nahid-3.jpg){: refdef data-width="1000" data-height="561"}
 ![...]({{site.baseurl}}/imgs/blog/photoshoot-nahid/small-nahid-3.jpg)
 
-He couldn’t understand where to look at when we asked him to look upwards. So we tricked him to help with that. Here! Look here! We keep saying this. And he listened to us as an obedient kid. He kept looking where we pointed. It would be better if we could do a video. The scene was watch worthy. Once we cropped and edited slightly, we got a fantastic picture which we used as profile picture afterwards. Nahid set this picture as his [facebook profile picture ](https://www.facebook.com/photo.php?fbid=1086601374752138&set=a.105436342868651.11874.100002068584066&type=3&source=11)
+He couldn’t understand where to look at when we asked him to look upwards. So we tricked him to help with that. Here! Look here! We keep saying this. And he listened to us as an obedient kid. He kept looking where we pointed. It would be better if we could do a video. The scene was watch worthy. Once we cropped and edited slightly, we got a fantastic picture which we used as profile picture afterwards. Nahid set this picture as his [facebook profile picture ](https://www.facebook.com/photo.php?fbid=1086601374752138&set=a.105436342868651.11874.100002068584066&type=3&source=11){:target="_blank"}
 
 ### Need vivid smile, open-hearted smile, like hu ha ha
 
