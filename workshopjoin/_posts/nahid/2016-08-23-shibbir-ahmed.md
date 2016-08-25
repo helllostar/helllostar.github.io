@@ -9,7 +9,7 @@ bio: "He has a long track record of creating dynamic, rich and interesting web p
 
 company:      
 companyURL:   
-posiiton:     Web Application Developer 
+posiiton:     Web Application Developer
 
 facebook:     
 twitter:      
@@ -17,7 +17,7 @@ github:
 codepen:      
 dribbble:     
 behance:      
-mailto:       
+mailto:       creativeartbd@gmail.com
 
 photo:        shibbir-ahmed.jpg
 ---
