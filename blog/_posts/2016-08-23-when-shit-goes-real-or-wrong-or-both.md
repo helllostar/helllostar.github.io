@@ -106,3 +106,6 @@ I was still in a deep sleep that time and for the first time in my life, I have 
 Long story short, I didn't do the translation eventually. [Abida](https://www.facebook.com/abida.keya){:target="_blank"} did. Zafree was unable to request me again for the same task, as he loves himself more than anything in the world. He ended up requesting Abida instead. She did an excellent job.
 
 So it was lesson for every one that you gotta have some good memory (so you don’t forget to tell something important to the person who you want to work for you) to get the job done like the way you wanted it to be done, no matter how good you are at writing codes.
+
+![...]({{site.baseurl}}/imgs/blog/shit-goes-real/shit.gif){: refdef data-width="1280" data-height="640"}
+![...]({{site.baseurl}}/imgs/blog/photoshoot-nahid/small-shit.jpg)
