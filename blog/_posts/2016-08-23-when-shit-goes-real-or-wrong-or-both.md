@@ -15,19 +15,19 @@ publisherURL: https://www.facebook.com/proloyhasan
 publisherABOUT: "<a href='https://www.facebook.com/proloyhasan' target='_blank'>Proloy Hasan</a> is a very much youthful, funny and lively person to meet with. He is passionate about writings, feels so much comfortable to introduce himself as a freelance blogger as he has been into blogging since 2006. He used to write for almost all popular Bengali blogs available online, now is regular only on Facebook and his personal blog. His parents were used to be writers as well. He is not an author of a book yet. Besides writings, he loves and extremely enjoy cooking, playing guitar and piano, watching sci-fi movies, and photography. Recently he started drawings on his digital canvas."
 ---
 
-It was midnight when [Zafree](https://www.facebook.com/zafree){:target="_blank"} knocked me a couple of weeks ago, out of just nowhere, for a translation job for his Helllostar page's upcoming workshop. He loves writing in his mother language, (so do I), and he requested me for this sort of task once before. But that was a Bengali translation from English.
+It was midnight when [Zafree](https://www.facebook.com/zafree){:target="_blank"} knocked me a couple of weeks ago, out of just nowhere, for a translation job for his Hello Star page's upcoming workshop. He loves writing in his mother language, (so do I), and he requested me for this sort of task once before. But that was a Bengali translation from English. 
 
-I was busy like hell that time, with my official and academic assignments as I got admitted to higher study recently. But he said he was needed it urgently, by the next morning, to be precisely. He said me to get it done by that night and send that to him via Facebook inbox and he will check it on later in the morning, As soon as he said it, he simply disappeared from online, (or fallen asleep)!
+I was busy as hell that time, with my official and academic assignments as I got admitted to a higher study recently. But he said he was needed it urgently, by the next morning to be precise. He told me to get it done by that night and send that to him via Facebook inbox once I have finished with the translation. And he will check it on later in the morning, As soon as he said it; he simply disappeared from online, (or fallen asleep)!
 
-So I finished my assignments in a hurry and jumped to his translation right away.
+So I finished my assignments in a hurry and jumped into his translation right away.
 
-He gave me some fancy paragraphs on my inbox of which some were written in Bangla and some were in English, so I was a bit confused that which version I should be working on, as he didn't instruct me explicitly. It was almost 4 o'clock in the morning and started translating in Bengali, that's because my previous task was with him in translating English into Bengali. So I thought this would be the same this time too.
+He gave me some fancy paragraphs on my inbox of which some were written in Bangla and some were in English, so I was a bit confused that which version I should be working on, as he didn't instruct me explicitly. It was almost 4 o'clock in the morning and started translating in Bengali; that's because my previous task was with him in translating English into Bengali. So I thought this would be the same for this time too.
 
 ![...]({{site.baseurl}}/imgs/blog/shit-goes-real/vulvul.jpg)
 
 ### Translation Part
 
-It was almost 7 o clock in the morning when I have finished with the translation and I was pretty satisfied about my work. He asked me to put some humor while translating so I did it, as much as I could. Personally I really liked the way I used some Bengali words in them as I didn’t use it anywhere ever before, in fact that has not came up in my mind ever before.
+It was almost seven o clock in the morning when I have finished with the translation, and I was pretty satisfied with my work. Zafree asked me to put some humor while translating, so I did, as much as I could. Personally, I really liked the way I used some Bengali words in them as I didn’t use it anywhere ever before, in fact that has not come up in my mind ever before. It was some stupid yet hilariously weird wordings.
 
 > Workshop Description
 >
@@ -95,11 +95,11 @@ It was almost 7 o clock in the morning when I have finished with the translation
 > এটা ভাবার কোনো কারন নেই যে, এই ওয়ার্কশপে অংশগ্রহন করলেই আপনি একজন লারাভেল জিনিয়াস হয়ে যাবেন, তবে হ্যাঁ, কেন লারাভেল আপনার জন্য জরুরী ও লারাভেলের নান্দনিকতা সম্পর্কে ভালো একটা ধারনা পাবেন। জানতে পারবেন, লারাভেল দিয়ে কি ভেল্কি দেখানো সম্ভব! বাকী কথা তোলা থাক, ওয়ার্কশপের জন্য!
 
 
-So, I was very much happy with the translation job and imagining Zafree's happier face too, I was thinking when he'd see my work, he would be definitely happier than me. So I went to my bed in 7 o clock in the morning with a smiling face. :D
+So, I was pretty much happy with the translation job and imagining Zafree's happier face too, I was thinking when he'd see my work, he would be definitely happier than me. So I went to my bed in 7 o clock in the morning with a smiling face. :D
 
-It was almost 1 PM in the afternoon on the same day when Zafree knocked me back on my Facebook inbox and says with a grin that, my translation was great but the problem is, this time he actually wanted the English translation, not the Bengali one. But he forgot to mention that.
+t was almost 1 PM in the afternoon on the same day when Zafree knocked me back on my Facebook inbox and says with a grin that, my translation was great but the problem is, this time he actually wanted the English translation, not the Bengali one. But he forgot to mention that.
 
-I was still in a deep sleep that time and for the first time in my life, I have realized how it feel like to be furious on someone while still you are in half sleep and half awake. And I was like - "WTF?! Seriously?!" If he was in front of me that time, I'd knock him up straight away, for sure. That's why I did not reply him. He knew that the message was seen.
+I was still in a deep sleep that time and for the first time in my life, I have realized how it feel like to be furious on someone while still you are in half sleep and half awake. And I was like - "WTF?! Seriously?!" If he was in front of me that time, I'd have knocked him up straight away, for sure. That's why I did not reply him. He knew that the message was seen.
 
 ![...]({{site.baseurl}}/imgs/blog/shit-goes-real/wtf.jpeg)
 
