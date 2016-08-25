@@ -2287,6 +2287,11 @@ figure {
 
 .post p {
   margin-bottom: 30px; }
+  .post p img {
+    width: auto;
+    max-width: 100;
+    margin: 0 auto;
+    display: inherit; }
 .post a {
   color: #6a9dfa; }
   .post a:hover, .post a:focus {
@@ -2294,6 +2299,28 @@ figure {
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   padding-top: 10px;
   padding-bottom: 20px; }
+.post blockquote {
+  padding: 40px;
+  border: 1px solid #f0f6f6;
+  background-color: rgba(240, 246, 246, 0.5); }
+.post table {
+  max-width: 100%;
+  background-color: transparent;
+  margin-bottom: 40px; }
+.post table thead th {
+  vertical-align: bottom; }
+.post table th {
+  font-weight: bold;
+  padding: 10px 15px;
+  line-height: 20px;
+  border-top: none; }
+.post table td {
+  padding: 10px 15px;
+  line-height: 20px;
+  vertical-align: top;
+  border-top: 1px solid #ddd; }
+.post th {
+  text-align: left; }
 .post-header {
   padding-bottom: 50px; }
 .post-title {
