@@ -11,13 +11,13 @@ company:
 companyURL:   
 posiiton:     Student
 
-facebook:     kaiser.tushar
-twitter:      kaiser-tushar
+facebook:    tanbir.me
+twitter:      
 github:       
 codepen:      
 dribbble:     
 behance:      
-mailto:       
+mailto:      zihadprogrammer@gmail.com
 
 photo:        tanbir-chowdhury.jpg
 ---
