@@ -2289,7 +2289,7 @@ figure {
   margin-bottom: 30px; }
   .post p img {
     width: auto;
-    max-width: 100;
+    max-width: 100%;
     margin: 0 auto;
     display: inherit; }
 .post a {
