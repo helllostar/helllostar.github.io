@@ -6,9 +6,9 @@ date:   2016-11-16
 categories: bubtypo
 
 postImgDir: bubtypo-friendly-challenge
-cover: friendly-challenge.jpg
-coverWidth: 1280
-coverHeight: 640
+cover: friendly-challenge.png
+coverWidth: 1900
+coverHeight: 941
 
 publisher: Zafree
 publisherURL: http://zafree.github.io/
